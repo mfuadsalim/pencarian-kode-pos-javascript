@@ -4,37 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pencarian Kode Pos Indonesia</title>
+    <title>KodePos Indonesia</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
 </head>
-<body id="body">
-    <header>
-        <h1>Pencarian Kode Pos</h1>
-    </header>
-
-    <div class="content">
-        <div class="form-container">
-            <div class="content-container">
-                <label for="cari_provinsi"> Provinsi </label>
-                <input type="text" name="provinsi" id="cari-provinsi" placeholder="Masukkan Provinsi">
-            </div>
-            <div class="content-container">
-                <label for="cari_kota"> Kota/Kabupaten </label>
-                <input type="text" name="kota" id="cari-kota" placeholder="Masukkan Kota/Kabupaten">
-            </div>
-            <div class="content-container">
-                <label for="cari_kecamatan"> Kecamatan </label>
-                <input type="text" name="kecamatan" id="cari-kecamatan" placeholder="Masukkan Kecamatan">
-            </div>
-            <br><br>
-            <button id="cari">Cari Kode Pos</button>
-        </div>
-        <br>
-        <section id="result-container">
-
-        </section>
+<body>
+    <div class="header">
+        <h1>Kode Pos Indonesia</h1>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <div class="container">
+        <div class="card">
+            <p>Masukkan data berupa wilayah Provinsi, Kabupaten, dan Kecamatan untuk mencari kode pos</p>
+            <h1>Provinsi</h1>
+            <select id="prov">
+                <option value="item0">-- Pilih Provinsi --</option>
+            </select>
+            <h1>Kabupaten</h1>
+            <select id="kab">
+                <option value="item0">-- Pilih Kabupaten --</option>
+            </select>
+            <h1>Kecamatan</h1>
+            <select id="kec">
+                <option value="item0">-- Pilih Kecamatan --</option>
+            </select>
+            <button type="button" id="searchBtn" target="#res">Cari</button>
+        </div>
+        <div id="res" class=""></div>
+    </div>
 </body>
 </html>
